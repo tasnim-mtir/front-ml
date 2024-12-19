@@ -113,7 +113,6 @@ function getRecommendation(userDetails) {
 }
 
 
-// Speech synthesis functionality
 function Speech(say) {
   if ('speechSynthesis' in window) {
     console.log("Speech synthesis is supported");
@@ -124,7 +123,6 @@ function Speech(say) {
   }
 }
 
-// Utils
 function get(selector, root = document) {
   return root.querySelector(selector);
 }
