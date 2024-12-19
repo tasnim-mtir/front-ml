@@ -8,9 +8,9 @@ const BOT_NAME = "BOT";
 const PERSON_NAME = "user";
 
 let step = 0;
-let userDetails = {}; // Changed from userData to userDetails
-let messages = []; // Array to store messages
-let lastUserMessage = ""; // Track the last user message
+let userDetails = {}; 
+let messages = []; 
+let lastUserMessage = ""; 
 
 msgerForm.addEventListener("submit", event => {
   event.preventDefault();
@@ -92,7 +92,6 @@ function getRecommendation(userDetails) {
       Your BMI case is: ${bmiCase} <br>
     `;
 
-    // Add workout image if planNumber exists
     if (planNumber) {
       const imageUrl = `images/${planNumber}.png`;
 
