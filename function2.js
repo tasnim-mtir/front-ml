@@ -86,8 +86,7 @@ function getRecommendation(userDetails) {
   .then(result => {
     const bmi = result.BMI;
     const bmiCase = result.BMIcase;
-    const planNumber = result.RecommendedExercisePlan?.["Exercise Recommendation Plan"]?.trim();
-
+    const planNumber = result.RecommendedExercisePlan;
     let recommendationText = `
       Your BMI is: ${bmi} <br>
       Your BMI case is: ${bmiCase} <br>
