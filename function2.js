@@ -39,28 +39,28 @@ function appendMessage(name, img, side, text) {
   `;
   msgerChat.insertAdjacentHTML("beforeend", msgHTML);
   msgerChat.scrollTop += 500;
-  messages.push(`${name}: ${text}`); // Store message in the array
+  messages.push(`${name}: ${text}`); 
 }
 
 function handleUserInput(msgText) {
   if (step === 0 && msgText.toLowerCase().includes("recommend workout")) {
-    askQuestion("What is your gender (male/female)?");
+    askQuestion("What is your gender ?");
     step++;
   } else if (step === 1) {
-    userDetails.gender = msgText; // Changed to userDetails
+    userDetails.gender = msgText; 
     askQuestion("How old are you?");
     step++;
   } else if (step === 2) {
-    userDetails.age = msgText; // Changed to userDetails
+    userDetails.age = msgText; 
     askQuestion("What is your weight in kg?");
     step++;
   } else if (step === 3) {
-    userDetails.weight = msgText; // Changed to userDetails
+    userDetails.weight = msgText; 
     askQuestion("What is your height in meters?");
     step++;
   } else if (step === 4) {
-    userDetails.height = msgText; // Changed to userDetails
-    getRecommendation(userDetails); // Passed userDetails
+    userDetails.height = msgText; 
+    getRecommendation(userDetails); 
     step++;
   }
   else {
@@ -71,7 +71,7 @@ function handleUserInput(msgText) {
 
 function askQuestion(question) {
   appendMessage(BOT_NAME, BOT_IMG, "left", question);
-  Speech(question); // Speak out the question
+  Speech(question); 
 }
 
 function getRecommendation(userDetails) {
